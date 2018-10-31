@@ -4,22 +4,22 @@ import './Weather.css';
 class Weather extends Component {
 
     render() {
-        let arr = this.props.data[0];
-        let weather = arr.consolidated_weather;
+        let weatherDetails = this.props.data;
+        let weather = weatherDetails.consolidated_weather;
         let lastTemp = weather[weather.length-1];
         return (
-            <div className="Weather">
-                <b>{arr.title}</b>
-                <li>
+            <ul>
+                <b> {weatherDetails.title} </b>
+                <p>
                     Temperature : {lastTemp.the_temp}
-                </li>
-                <li>
+                </p>
+                <p>
                     Min Temperature : {lastTemp.min_temp}
-                </li>
-                <li>
+                </p>
+                <p>
                     Max Temperature : {lastTemp.max_temp}
-                </li>
-            </div>
+                </p>
+            </ul>
         )
     }
 }
