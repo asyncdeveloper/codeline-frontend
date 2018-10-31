@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Weather.css';
+import {Link} from "react-router-dom";
 
 const API = 'https://catchupng.000webhostapp.com/weather.php?command=location&woeid=';
 
@@ -38,7 +39,7 @@ class Weather extends Component {
             let lastTemp = weather[weather.length-1];
             return (
                 <ul>
-                    <b> {weatherDetails.title} </b>
+                    <Link to={'/weather/' + weatherDetails.woeid} >{weatherDetails.title}</Link>
                     <p>
                         Temperature : {lastTemp.the_temp} centigrade
                     </p>
