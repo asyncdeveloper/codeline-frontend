@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Weather.css';
 import {Link} from "react-router-dom";
 
 const API = 'https://catchupng.000webhostapp.com/weather.php?command=location&woeid=';
