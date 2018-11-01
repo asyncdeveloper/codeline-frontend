@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Weather from "./components/Weather/Weather";
+import Weather from "./components/Weather";
 
 const API = 'https://catchupng.000webhostapp.com/weather.php?command=location&woeid=';
 const INSTANBUL_CITYID = '2344116';
